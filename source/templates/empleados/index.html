@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-  <h1> Hola Flask </h1>
+{% include 'header.html' %}
+<div class="container">
+<h1> Hola Flask </h1>
   <table>
       <thead>
         <tr>
-            <th>#</th>
-            <th>Nombre</th> 
-            <th>Correo</th> 
-            <th>Foto</th> 
+          <th>#</th>
+          <th>Nombre</th> 
+          <th>Correo</th> 
+          <th>Foto</th> 
         </tr>  
       </thead>
     <tbody>
@@ -25,8 +18,14 @@
        <td>{{empleado[2]}}</td> 
        <td>{{empleado[3]}}</td> 
       </tr>
+      <td>
+        <a href="/modify/{{empleados[0]}}">Modificar</a>
+        |
+        <a href="/delate/{{empleados[0]}}">Borrar</a>
+      </td>
       {% endfor %}
     </tbody>
-  </table>  
-</body>
-</html>
+  </table>
+  </div>
+  
+  
