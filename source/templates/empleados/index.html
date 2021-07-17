@@ -1,0 +1,31 @@
+{% include 'header.html' %}
+<div class="container">
+<h1> Hola Flask </h1>
+  <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre</th> 
+          <th>Correo</th> 
+          <th>Foto</th> 
+        </tr>  
+      </thead>
+    <tbody>
+      {% for empleado in empleados %}
+      <tr>
+       <td>{{empleado[0]}}</td>
+       <td>{{empleado[1]}}</td> 
+       <td>{{empleado[2]}}</td> 
+       <td>{{empleado[3]}}</td> 
+      </tr>
+      <td>
+        <a href="/modify/{{empleados[0]}}">Modificar</a>
+        |
+        <a href="/delate/{{empleados[0]}}">Borrar</a>
+      </td>
+      {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  
+  
