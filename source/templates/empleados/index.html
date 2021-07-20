@@ -13,15 +13,15 @@
     <tbody>
       {% for empleado in empleados %}
       <tr>
-       <td>{{empleado[0]}}</td>
+       <td>{{empleado[3]}}</td>
+       <td>{{empleado[0]}}</td> 
        <td>{{empleado[1]}}</td> 
        <td>{{empleado[2]}}</td> 
-       <td>{{empleado[3]}}</td> 
       </tr>
       <td>
-        <a href="/modify/{{empleados[0]}}">Modificar</a>
+        <a href="/modify/{{empleado[3]}}">Modificar</a>
         |
-        <a href="/delate/{{empleados[0]}}">Borrar</a>
+        <a href="/delete/{{empleado[3]}}">Borrar</a>
       </td>
       {% endfor %}
     </tbody>

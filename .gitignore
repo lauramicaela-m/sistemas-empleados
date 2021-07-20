@@ -1,3 +1,10 @@
 **/venv
 .vscode
 __pycache__
+
+*.jpg
+*.jpeg
+*.png
+*.pdf
+*.tiff
+*.DS_STORE
